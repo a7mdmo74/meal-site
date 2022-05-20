@@ -1,0 +1,23 @@
+.button {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  padding: 0.8rem 0;
+  box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  .icon {
+    position: absolute;
+    left: 5px;
+  }
+  .text {
+    color: rgb(155, 146, 146);
+  }
+  &:active {
+    transform: scale(0.98);
+  }
+}

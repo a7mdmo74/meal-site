@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/Header/Header";
+import Navbar from "./components/Navbar/Navbar";
+import Categories from "./components/Category/Categories";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Recipes from "./pages/Recipes/Recipes";
+import Meals from "./pages/Meals/Meals";
+import Search from "./components/Search/Search";
+import { useState } from "react";
+import Filter from "./pages/Recipes/filter";
 
 function App() {
+  const [search, setSearch] = useState(false);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Search setSearch={setSearch} search={search} />
+        <Navbar setSearch={setSearch} />
+        <Header setSearch={setSearch} />
+        <Routes>
+          <Route path="/" element={<Categories />} />
+          <Route path="recipes/:name" element={<Recipes />} />
+          <Route path="recipes/filter/:letter" element={<Filter />} />
+          <Route path="meals/:name" element={<Meals />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

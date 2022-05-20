@@ -1,0 +1,15 @@
+.categories {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #00695c;
+  color: #fff;
+}
+
+.category {
+  &__item {
+    &:hover {
+      transform: scale(1.1);
+      transition: all 0.5s ease-in-out;
+    }
+  }
+}
