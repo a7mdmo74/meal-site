@@ -29,7 +29,7 @@ const Recipe = ({ recipe }) => {
     navigate(`/meals/${name}`);
   };
   return (
-    <Grid item xs={12} md={4} id={idMeal} className="recipe">
+    <Grid item xs={12} sm={6} md={4} id={idMeal} className="recipe">
       <Item className="recipe__item" onClick={() => navigatePage(strMeal)}>
         <div className="recipe__img">
           <img src={strMealThumb} alt={strMeal} />

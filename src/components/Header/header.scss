@@ -28,6 +28,7 @@
     }
   }
   &__search {
+    margin-top: 1.5rem;
     button {
       width: 350px;
     }
@@ -38,10 +39,8 @@
   .header {
     &__content {
       h2 {
-        color: #ffffff;
-        font-weight: 700;
+        font-weight: 500;
         font-size: 1.2rem;
-        padding: 1rem 0;
       }
     }
   }

@@ -51,7 +51,7 @@ const Meal = ({ meal }) => {
   } = meal;
 
   return (
-    <Grid item xs={12} md={8} id={idMeal} className="meal">
+    <Grid item xs={12} id={idMeal} className="meal">
       <Item className="meal__item">
         <div className="meal__title">
           <Typography variant="h5" component="div" className="desc">

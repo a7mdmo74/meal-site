@@ -32,19 +32,19 @@ const Category = ({ cat }) => {
   };
 
   return (
-    <Grid item xs={12} md={4} id={idCategory} className="category">
+    <Grid item xs={12} sm={6} md={4} id={idCategory} className="category">
       <Item
         className="category__item"
         onClick={() => navigatePage(strCategory)}
       >
-        <Typography variant="h4" component="div" className="title">
+        <Typography variant="h4" component="h3" className="title">
           {strCategory}
         </Typography>
         <div className="category__img">
           <img src={strCategoryThumb} alt={strCategory} />
         </div>
         <div className="category__desc">
-          <Typography variant="p" component="div" className="desc">
+          <Typography variant="p" component="p" className="desc">
             {strCategoryDescription.slice(0, 200)}...
           </Typography>
         </div>
