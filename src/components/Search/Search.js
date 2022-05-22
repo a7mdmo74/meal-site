@@ -24,7 +24,6 @@ const Search = ({ search, setSearch }) => {
     <div className={search ? "search open" : "search"}>
       <div className="search__content">
         <Typography variant="h4">Search for meals</Typography>
-        <Typography variant="p">try letters or name of meal</Typography>
         <TextField
           id="outlined-basic"
           fullWidth
